@@ -1,3 +1,11 @@
+<%= form_for :user, url: users_path, method: :post do |f| %>
+	Username: <%= f.text_field :username, :value => "username" %><br/>
+	Email: <%= f.text_field :email, :value => "test@test.com" %><br/>
+	Password: <%= f.password_field :password %>
+	<%= f.submit %>
+<% end %>
+
+<!--
 <%= form_tag users_path method: :post do %>
 	<%= label_tag :username %>
 	<%= text_field_tag :username %>
@@ -11,6 +19,8 @@
 	<%= submit_tag "Submit" %>
 
 <% end %>
+-->
+
 <!--
 <form action="/users" method="post" accept-charset="UTF-8">
 	Username: <input type="text" name="user[username]"><br>
